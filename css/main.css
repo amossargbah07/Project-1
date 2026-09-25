@@ -23,6 +23,14 @@ p {
   margin: 0;
 }
 
+section {
+  padding: 7em 0;
+}
+
+.spacing>*+* {
+  margin-top: var(--spacer, 2rem)
+}
+
 .container {
   width: 85%;
   max-width: 65em;
@@ -39,7 +47,7 @@ p {
   background: var(--cir-accent, blue);
   border-radius: .25em;
   transition: transform 250ms ease-in-out,
-   opacity 175ms linear;
+   opacity 250ms linear;
 
 }
 
@@ -47,4 +55,36 @@ p {
 .btn:focus {
   transform: scale(1.1);
   opacity: .9;
+}
+
+.primary-title {
+  font-size: 4rem;
+   font-size: clamp(3rem, calc(5vw + 1rem)  4.5rem);
+   line-height: 1;
+   text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+}
+
+.hero {
+  color:white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+
+  @supports (background-blend-mode: multiply) {
+  background-image: url(../img/shoe5.png),
+  radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-image-size: 100%;
+  }
+
+  /* background-size: 10%; */
 }
