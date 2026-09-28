@@ -23,10 +23,6 @@ p {
   margin: 0;
 }
 
-section {
-  padding: 7em 0;
-}
-
 .spacing>*+* {
   margin-top: var(--spacer, 2rem)
 }
@@ -35,6 +31,23 @@ section {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &>* {
+   flex-basis: 30%;
+   min-width: 15em;
+  }
+}
+
+
+.section {
+  padding: 7em 0;
 }
 
 .btn {
@@ -68,13 +81,14 @@ section {
   text-align: center;
   font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
+  color: #17353d;
 }
 
 .hero {
   color:white;
   text-align: center;
   padding: 15em 0;
-  background: #222;
+  background: #606060;
 
   @supports (background-blend-mode: multiply) {
   background-image: url(../img/shoe5.png),
