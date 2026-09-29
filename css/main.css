@@ -35,7 +35,7 @@ p {
 
 .split {
   display: flex;
-  gap: 1em;
+  gap: 2em;
   flex-wrap: wrap;
   justify-content: center;
 
@@ -82,6 +82,7 @@ p {
   font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
   color: #17353d;
+  margin-bottom: 3rem;
 }
 
 .hero {
@@ -101,4 +102,20 @@ p {
   }
 
   /* background-size: 10%; */
+}
+
+.featured {
+  background: white;
+  
+  &__item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1);
+    }
+  }
 }
