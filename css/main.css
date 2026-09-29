@@ -104,10 +104,8 @@ p {
   /* background-size: 10%; */
 }
 
-.featured {
+.featured__item {
   background: white;
-  
-  &__item {
     display: block;
     position: relative;
     transform: scale(.85);
@@ -118,4 +116,3 @@ p {
       transform: scale(1);
     }
   }
-}
